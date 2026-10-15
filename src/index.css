@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Monivelle: warm off-white canvas, dark brown ink, soft green accents */
+  --bg: #faf8f5;
+  --bg-gradient: linear-gradient(180deg, #faf8f5 0%, #f5f0e8 100%);
+  --surface: rgba(255, 255, 255, 0.82);
+  --surface-strong: rgba(255, 255, 255, 0.96);
+  --surface-muted: #f2ede4;
+  --ink: #2c1a0e;
+  --ink-2: #4a3728;
+  --muted: #7a6555;
+  --subtle: #a08878;
+  --border: rgba(44, 26, 14, 0.10);
+  --border-strong: rgba(44, 26, 14, 0.28);
+  --accent: #2c6e49;
+  --accent-hover: #1f5235;
+  --accent-light: rgba(44, 110, 73, 0.10);
+  --accent-mid: rgba(44, 110, 73, 0.18);
+  --focus: #4caf78;
+  --success: #2c6e49;
+  --danger: #c0392b;
+  --danger-light: rgba(192, 57, 43, 0.10);
+  --income: #2c6e49;
+  --income-light: rgba(44, 110, 73, 0.10);
+  --expense: #c0392b;
+  --expense-light: rgba(192, 57, 43, 0.10);
+  --warning: #b45309;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100dvh;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--ink);
+}
+
+.display {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.mono {
+  font-family: 'JetBrains Mono', Menlo, monospace;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 3px; }
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Toast customization */
+[data-sonner-toaster] { font-family: 'DM Sans', sans-serif !important; }
